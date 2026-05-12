@@ -1,0 +1,186 @@
+.section {
+  padding: 7rem 3rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.sectionNum {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--amber);
+  letter-spacing: 0.15em;
+}
+
+.sectionTitle {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--paper);
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--amber);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  border: 1px solid rgba(244, 240, 232, 0.07);
+  padding: 2rem;
+  background: rgba(255,255,255,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.card:hover {
+  border-color: rgba(232, 160, 32, 0.25);
+  transform: translateY(-3px);
+}
+
+.featuredCard {
+  border-color: rgba(232, 160, 32, 0.2);
+  background: rgba(232, 160, 32, 0.04);
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--amber);
+  color: var(--ink);
+  padding: 0.25rem 0.6rem;
+  font-weight: 500;
+}
+
+.cardTop { flex: 1; }
+
+.role {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.projectName {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(244, 240, 232, 0.65);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  padding: 0.25rem 0.6rem;
+  background: rgba(244, 240, 232, 0.05);
+  border: 1px solid rgba(244, 240, 232, 0.08);
+  color: rgba(244, 240, 232, 0.55);
+  letter-spacing: 0.04em;
+}
+
+/* Education */
+.education {
+  border-top: 1px solid rgba(244, 240, 232, 0.06);
+  padding-top: 3rem;
+}
+
+.eduHeader {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.eduGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.eduCard {
+  padding: 1.5rem;
+  border: 1px solid rgba(244, 240, 232, 0.06);
+}
+
+.eduYear {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--amber);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.eduDegree {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.eduSchool {
+  font-size: 0.82rem;
+  color: rgba(244, 240, 232, 0.55);
+  margin-bottom: 0.4rem;
+}
+
+.eduGpa {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--smoke);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .section { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}

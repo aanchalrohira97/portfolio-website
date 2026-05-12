@@ -1,0 +1,125 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  transition: background 0.35s ease, padding 0.35s ease, border-color 0.35s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 1rem 3rem;
+  border-bottom-color: rgba(232, 160, 32, 0.2);
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--amber);
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.logoAbbr { color: var(--amber); }
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.link {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.link:hover { color: var(--paper); }
+
+.cta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  padding: 0.5rem 1.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cta:hover {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--paper);
+  transition: transform 0.2s;
+}
+
+.barOpen {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--amber);
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.barOpen2 {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--amber);
+  transform: rotate(-45deg) translate(0px, -2px);
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 10, 0.97);
+  border-bottom: 1px solid rgba(232, 160, 32, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+  gap: 1.2rem;
+}
+
+.mobileLink {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.2rem 1.5rem; }
+  .scrolled { padding: 0.9rem 1.5rem; }
+  .links, .cta { display: none; }
+  .hamburger { display: flex; }
+}
