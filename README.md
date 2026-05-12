@@ -2,6 +2,8 @@
 
 Dark editorial portfolio built with React + Vite + Framer Motion.
 
+You can find the deployed App here: https://aanchalrohira.vercel.app/ 
+
 ## Stack
 - React 18 + Vite
 - Framer Motion (scroll animations)
